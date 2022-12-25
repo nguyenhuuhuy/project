@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/massterhome.css" />
+  </head>
+  <body>
+    <div class="containerAll">
+        <h1>Các mặt hàng</h1>
+      <div class="container-top">
+        
+        <div class="top-left">
+            <div>
+                <p>thêm ảnh</p>
+                <input type="text"><br>
+                <p>thêm tên</p>
+                <input type="text"><br>
+                <p>thêm giá tiền</p>
+                <input type="text"><br>
+                <p>thêm trạng thái</p>
+                <input type="text"><br><br>
+                <button>thêm</button>
+            </div>
+        </div>
+       
+        
+       <div class="top-mid">
+        <table>
+          <tbody class="table-top">
+            <tr>
+              <th>STT</th>
+              <th>ẢNH</th>
+              <th>TÊN</th>
+              <th>GIÁ TIỀN</th>
+              <th>TRẠNG THÁI</th>
+              <th>CHỈNH SỬA</th>
+            </tr>
+          </tbody>
+          <tbody id="table-bot">
+            <tr>
+              <td>1</td>
+              <td>
+               <div style="width: 100px;"> <img class="img-prd" src="/image/fruits_1.jpg" alt="" /></div>
+              </td>
+              <td>quả nho</td>
+              <td>30$</td>
+              <td>Còn Hàng</td>
+              <td>
+                <button class="edit-button" onclick="edit_item()">EDIT</button>
+                <button class="delete-button" onclick="delete_item()">DELETE</button>
+                <button class="finished-button" onclick="finished_item()">FiNISHED</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+        <div class="top-right">
+         <div>
+            <br>
+            <p>name</p>
+          <input type="text" id="input_value" placeholder="Enter a task here" />
+          <p>price</p>
+          <input type="text" id="edit_price" />
+          <button onclick="add_save()" id="addSave">SỬA</button>
+        </div>
+        <span id="error">vùi lòng nhập </span>
+       </div>
+      </div>
+      <div class="container-bot">
+        <div class="container-2">
+        <div class="logo_register">
+          <h1>QUẢN LÝ ĐĂNG NHẬP</h1>
+        </div>
+        <div class="edit_register">
+          <input type="text" id="password_register" placeholder="Enter a task here" />
+          <button onclick="add_pass()" id="addList">SỬA</button>
+        </div>
+        <div class="table_register">
+          <table>
+          <tbody class="table_register_top">
+            <tr>
+            <th>No.</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Chỉnh Sửa</th>
+          </tr>
+          </tbody>
+          <tbody id="pushList">
+          </tbody>
+        </table>
+        </div>
+      </div>
+      <!-- <div class="container-3">
+        <h1>Các mặt hàng</h1>
+        <div>
+          <input type="text" id="input_value" placeholder="Enter a task here" />
+          <button onclick="add_save()" id="addSave">SAVE</button>
+        </div>
+        <br />
+        <div>
+          <input type="text" id="search" />
+          <button id="button_search" onclick="search_item()">click</button>
+        </div>
+        <span id="error">vùi lòng nhập </span>
+        <table>
+          <tr>
+            <th>No.</th>
+            <th>Todo Item</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+          <tbody id="push"></tbody>
+        </table>
+      </div> -->
+      </div>
+    </div>
+  </body>
+  <script src="/js/massterHome.js"></script>
+</html>

@@ -1,0 +1,184 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.menu-container {
+    padding-top: 200px;
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.show-product {
+    margin: 10px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.content-product-h3 {
+    text-align: center;
+}
+.money {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-push-shop {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-cart {
+   position: fixed;
+   width: 100vw;
+   height: 100%;
+   background-color: rgba(0,0,0, .5);
+   z-index: 2;
+   padding-left: 30%;
+   display: none;
+}
+
+#close-shop {
+    font-size: 1.5rem;
+    float: right;
+    margin: 0.5rem 2em 0 0;
+    color: black;
+    cursor: pointer;
+}
+
+/*giỏ hàng*/
+
+.shop-cart {
+    height: 100%;
+    /* background-image: url(/image/buff.jpg); */
+    /* background-size: cover; */
+    background-color: aliceblue;
+    float: right;
+    width: 70%;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-radius: 20px;
+}
+.cart {
+   margin-top: 3em;
+   width: 95%;
+   margin-left: auto;
+   margin-right: auto;
+}
+.menu-total {
+    text-align: center;
+    margin: 2em 0 2em 0;
+}
+.total-price{
+    display: block;
+    font-size: 2rem;
+}
+
+.purchase {
+    font-size: 1rem;
+        font-weight: bolder;
+        background-color: green;
+        color: white;
+        padding: 1em 2em;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        margin: 2em 0 1em 0;
+}
+
+
+/*                          cart                    */
+
+tr, th {
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding: 2%;
+    width: 20%;
+}
+
+tr, td {
+    padding-top: 3%;
+}
+.close-cart {
+    width: 50px;
+   margin-left: 95%;
+
+}
+.delete-cart {
+    width: 60px;
+    height: 35px;
+    border-radius: 9px;
+    background-color: rgb(254, 95, 95);
+    color: aliceblue;
+}
+
+.table-top {
+    background-image: url(/image/table-1.jpg);
+    color: aliceblue;
+}
+
+.table-bot {
+    background-color: rgb(240, 227, 202);
+}
+
+/*                              menu-register    */
+
+
+
+
+.menu-register-login {
+    margin-right: 5%;
+}
+.menu-register-use {
+    width: 15%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.fa-solid {
+    margin-right: 10px;
+}
+
+
+/*                                      shop                                        */
+
+.menu-shopping {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(221, 247, 255);
+    border-radius: 50%;
+    position: fixed;
+    top: 75%;
+    left: 95%;
+    text-align: center;
+    padding-top: 0.9%;
+    padding-left: 0.5%;
+}
+
+/*                                  shop quantity                               */
+
+.edit {
+    width: 1.5%;
+    height: auto;
+    position: fixed;
+    top: 73%;
+    left: 97%;
+    background-color: red;
+    border-radius: 40%;
+}
+
+#editQuantity{
+    width:  100%;
+    height: auto;
+    color: aliceblue;
+    text-align: center;
+}
+

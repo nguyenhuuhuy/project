@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!--ĐẦU-->
+    <header class="top-navbar">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="/image/logo.jpg" style="height: 80px"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">TRANG CHỦ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/page/menu.html">SẢN PHẨM</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">GIỚI THIỆU</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/page/register.html">ĐĂNG NHẬP</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--giữa-->
+    <div class="slide-show">
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="false"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="/image/foody-upload-api-foody-mobile-fr-1107bd9d-210805191256.jpeg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>1</h5>
+              <p>sự kiện 1</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/image/foody-upload-api-foody-mobile-untitled-2-jpg-181228170008.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>2</h5>
+              <p>sự kiện 2</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/image/Fruits-Wallpapers.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>3</h5>
+              <p>sự kiện 3</p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!--sản phẩm-->
+    <div class="list-container">
+      <div class="menu-logo col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+        <div>
+          <img src="/image/xuan300.jpg" style="width: 100%; height: 200px" />
+        </div>
+        <div class="list-container-a"><a href="">Hoa Quả Mùa Xuân</a></div>
+      </div>
+
+      <div class="menu-logo col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+        <div>
+          <img src="/image/ha300.jpg" style="width: 100%; height: 200px" />
+        </div>
+        <div class="list-container-a"><a href="">Hoa Quả Mùa Hè</a></div>
+      </div>
+      <div class="menu-logo col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+        <div>
+          <img src="/image/thu300.jpg" style="width: 100%; height: 200px" />
+        </div>
+        <div class="list-container-a"><a href="">Hoa Quả Mùa Thu</a></div>
+      </div>
+      <div class="menu-logo col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+        <div>
+          <img src="/image/dong300.jpg" style="width: 100%; height: 200px" />
+        </div>
+        <div class="list-container-a"><a href="">Hoa Quả Mùa Đông</a></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-white text-muted">
+      <!-- Section: Links  -->
+      <section class="section-top">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3 text-secondary"></i>CÔNG TY TNHH MỘT
+                THÀNH VIÊN
+              </h6>
+              <p>
+                Hoa quả nhập từ trang web và bán bằng hình ảnh. Các bạn cứ ăn
+                thoải mái!
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">CHÍNH SÁCH</h6>
+              <p>
+                <a href="#!" class="text-reset">Chính sách bảo mật thông tin</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset"
+                  >Quy định và hình thức thanh toán</a
+                >
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Chính sách đổi trả</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Câu hỏi thường gặp</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p>
+                <i class="fas fa-home me-3 text-secondary"></i> HÀ NỘI, HÀ ĐÔNG
+              </p>
+              <p>
+                <i class="fas fa-envelope me-3 text-secondary"></i>
+                demo@example.com
+              </p>
+              <p>
+                <i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88
+              </p>
+              <p>
+                <i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>CÁC TRANG MẠNG XÃ HỘI</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Links  -->
+    </footer>
+    <!-- Footer -->
+    <script src="/js/index.js"></script>
+  </body>
+</html>

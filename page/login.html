@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="form-container">
+        <form action="" method="POST" class="form" id="form-2">
+        <h3 class="heading">Đăng nhập</h3>
+
+        <div class="spacer"></div>
+
+        <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input id="email_login" name="email" type="text" placeholder="email@domain.com" class="form-control" />
+            <span class="form-message"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="password" class="form-label">Mật khẩu</label>
+            <input id="password_login" name="password" type="password" placeholder="Nhập mật khẩu"
+                class="form-control" />
+            <i class="fa-solid fa-eye-slash" id="get_eye_3" onclick="getEye_3()"></i>
+            <span class="form-message" id="error_login" style="color: red; font-size: 15px; display: none;">Mật khẩu
+                hoặc email nhập
+                chưa chính xác!</span>
+        </div>
+
+        <input type="button" id="login" value="Đăng Nhập">
+    </form>
+    <script src="/js/login.js"></script>
+    </div>
+</body>
+</html>

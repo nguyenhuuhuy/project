@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.containerAll {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    
+}
+.container-bot {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-top {
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    text-align: center;
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+}
+.container-2 {
+    width: 40%;
+   height: auto;
+    border: 1px solid black;
+    text-align: center;
+    display: inline-table;
+}
+.container-3 {
+    width: 40%;
+    height: auto;
+    border: 1px solid black;
+    text-align: center;
+
+}
+
+
+.top-left {
+    width: 20%;
+    height: auto;
+    border: 1px solid black;
+}
+.top-right{
+    width: 20%;
+        height: auto;
+        border: 1px solid black;
+}
+.top-mid {
+    width: 100%;
+}
+span {
+    display: none;
+    position: absolute;
+    top: 135px;
+    left: 345px;
+}
+
+table {
+    width: 90%;
+    margin-top: 50px;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-collapse: collapse;
+    margin-left: 30px;
+}
+
+button {
+    margin-left: 10px;
+}
+
+th,
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+}
+
+#addSave {
+    width: 50px;
+    height: 30px;
+    background-color: rgb(68, 68, 221);
+    color: white;
+    border: 1px;
+    border-radius: 4px;
+}
+
+#input_value {
+    height: 23px;
+}
+
+.edit-button {
+    width: 50px;
+    height: 30px;
+    background-color: rgb(227, 194, 3);
+    color: white;
+    border: 1px;
+    border-radius: 4px;
+}
+
+.delete-button {
+    width: 70px;
+    height: 30px;
+    background-color: rgb(254, 50, 50);
+    color: aliceblue;
+    border: 1px;
+    border-radius: 4px;
+}
+
+.finished-button {
+    width: 75px;
+    height: 30px;
+    background-color: green;
+    color: aliceblue;
+    border: 1px;
+    border-radius: 4px;
+}
+
+
+img {
+    width: 100%;
+}
+
+
+/*bảng quản lý email*/
+
+.table_register {
+    width: 100%;
+    
+}
+
+#addList {
+    width: 50px;
+    height: 30px;
+    background-color: rgb(68, 68, 221);
+    color: white;
+    border: 1px;
+    border-radius: 4px;
+}
+
+.deleteRegister-button {
+    width: 70px;
+    height: 30px;
+    background-color: rgb(254, 50, 50);
+    color: aliceblue;
+    border: 1px;
+    border-radius: 4px;
+}
+
+.editRegister-button {
+    width: 50px;
+    height: 30px;
+    background-color: rgb(227, 194, 3);
+    color: white;
+    border: 1px;
+    border-radius: 4px;
+}
