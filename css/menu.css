@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 .menu-container {
     padding-top: 200px;
     display: flex;
@@ -16,10 +18,17 @@
     border-radius: 10px;
     background-color: aliceblue;
     position: relative;
+    border: 1px solid rgb(214, 214, 178);
 }
 
 .show-product:hover .content-product {
     height: 28%;
+}
+
+@media screen and (max-width: 1400px) {
+    .show-product:hover .content-product {
+            height: 40%;
+        }
 }
 
 img {
@@ -27,6 +36,7 @@ img {
     border-radius: 10px 10px 10px 10px;
     display: block;
     height: auto;
+    
 }
 
 .content-product{
@@ -158,10 +168,9 @@ tr, td {
 .menu-register-login {
     margin-right: 5%;
 }
-.menu-register-use {
-    width: 15%;
-    display: flex;
-    justify-content: flex-start;
+#registerLogin {
+    margin-right: 5%;
+    padding-left: 2%;
 }
 
 .fa-solid {

@@ -249,6 +249,8 @@ registration.addEventListener("click", function () {
       email: email.value,
       password: password.value,
       id: listProduct.length+1,
+      shop: [],
+      status: false,
     };
     listProduct.push(obj);
     localStorage.setItem("list", JSON.stringify(listProduct));
@@ -268,6 +270,8 @@ registration.addEventListener("click", function () {
         email: email.value,
         password: password.value,
         id: listProduct.length+1,
+        shop: [],
+        status: false,
       };
       listProduct.push(obj);
       localStorage.setItem("list", JSON.stringify(listProduct));

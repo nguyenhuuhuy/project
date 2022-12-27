@@ -5,7 +5,13 @@
     padding-top: 200px;
 }
 
-
+body {
+    background-image: url("/image/body.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
 
 .form {
     width: 360px;

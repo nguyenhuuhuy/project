@@ -10,6 +10,13 @@ html {
     font-family: 'Open Sans', sans-serif;
 }
 
+body {
+    background-image: url("/image/body.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
 .main {
     min-height: 100vh;
     display: flex;
