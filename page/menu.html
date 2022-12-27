@@ -31,20 +31,22 @@
     <!--dầu-->
     <header class="top-navbar">
       <div class="menu-cart">
-            <div class="shop-cart">
-              <div class="close-cart"><i class="fa-solid fa-xmark" id="close-shop"></i></div>
-              <div class="cart">
-                <table class="cart-table">
-                  <tbody class="table-top">
-                    <tr>
-                    <th>sản phẩn</th>
-                    <th>số lượng</th>
-                    <th>giá</th>
-                    <th>Delete</th>
-                  </tr>
-                  </tbody>
-                  <tbody class="table-bot" id="pushCart">
-                    <!-- <tr>
+        <div class="shop-cart">
+          <div class="close-cart">
+            <i class="fa-solid fa-xmark" id="close-shop"></i>
+          </div>
+          <div class="cart">
+            <table class="cart-table">
+              <tbody class="table-top">
+                <tr>
+                  <th>sản phẩn</th>
+                  <th>số lượng</th>
+                  <th>giá</th>
+                  <th>Delete</th>
+                </tr>
+              </tbody>
+              <tbody class="table-bot" id="pushCart">
+                <!-- <tr>
                     <td>
                       <img src="/image/qua-1.jpg" alt="">
                       <h3>quả nho</h3>
@@ -62,17 +64,16 @@
                     <td>3000k</td>
                     <td><button class="delete-cart">Delete</button></td>
                   </tr> -->
-                  </tbody>
-                </table>
-              </div>
-              <div class="menu-total">
-                <h1>TỔNG TIỀN</h1>
-              <span class="total-price" id="totalAll">0$</span>
-                <button class="purchase">THANH TOÁN</button>
-              </div>
-            
-            </div>
+              </tbody>
+            </table>
           </div>
+          <div class="menu-total">
+            <h1>TỔNG TIỀN</h1>
+            <span class="total-price" id="totalAll">0$</span>
+            <button class="purchase" onclick="payment()">THANH TOÁN</button>
+          </div>
+        </div>
+      </div>
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"
@@ -81,25 +82,37 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/index.html">TRANG CHỦ</a>
+                <a class="nav-link" aria-current="page" href="/index.html"
+                  >TRANG CHỦ</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/menu.html">SẢN PHẨM</a>
+                <a class="nav-link" href="#">SẢN PHẨM</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">GIỚI THIỆU</a>
               </li>
             </ul>
-
+            <form class="d-flex" role="search">
+              <input
+                oninput="checkSearch()"
+                id="search_Shop"
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
           </div>
-        
-            <div class="menu-register-use">
-              <i class="fa-solid fa-user"></i>
-              <span class="gmail-use" id="pushGmail">email@gmail.com</span>
-              
-            </div>    
-            <div id="registerLogin"><i class="fa-solid fa-right-to-bracket"></i></div>
-        
+
+          <div class="menu-register-use">
+            <i class="fa-solid fa-user"></i>
+            <span class="gmail-use" id="pushGmail">email@gmail.com</span>
+          </div>
+          <div id="registerLogin">
+            <i class="fa-solid fa-right-to-bracket"></i>
+          </div>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -111,12 +124,11 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          
         </div>
       </nav>
     </header>
     <!--giữa-->
-    
+
     <div class="menu-container" id="menuList">
       <!-- <div class="show-product col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
         <div class="img-product">
@@ -221,17 +233,15 @@
         </div>
       </div> -->
     </div>
- 
-<div class="menu-shopping">
- 
-  <i class="fa-sharp fa-solid fa-cart-shopping" id="getShop"></i>
-</div>
-<div class="edit">
-  <div id="editQuantity"></div>
-</div>
+
+    <div class="menu-shopping">
+      <i class="fa-sharp fa-solid fa-cart-shopping" id="getShop"></i>
+    </div>
+    <div class="edit">
+      <div id="editQuantity"></div>
+    </div>
     <!--cuối footer-->
     <footer class="text-center text-lg-start bg-white text-muted">
-
       <!-- Section: Links  -->
       <section class="section-top">
         <div class="container text-center text-md-start mt-5">
@@ -241,10 +251,12 @@
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <!-- Content -->
               <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem me-3 text-secondary"></i>CÔNG TY TNHH MỘT THÀNH VIÊN
+                <i class="fas fa-gem me-3 text-secondary"></i>CÔNG TY TNHH MỘT
+                THÀNH VIÊN
               </h6>
               <p>
-                Hoa quả nhập từ trang web và bán bằng hình ảnh. Các bạn cứ ăn thoải mái!
+                Hoa quả nhập từ trang web và bán bằng hình ảnh. Các bạn cứ ăn
+                thoải mái!
               </p>
             </div>
             <!-- Grid column -->
@@ -257,7 +269,9 @@
                 <a href="#!" class="text-reset">Chính sách bảo mật thông tin</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Quy định và hình thức thanh toán</a>
+                <a href="#!" class="text-reset"
+                  >Quy định và hình thức thanh toán</a
+                >
               </p>
               <p>
                 <a href="#!" class="text-reset">Chính sách đổi trả</a>
@@ -267,7 +281,6 @@
               </p>
             </div>
             <!-- Grid column -->
-
 
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">

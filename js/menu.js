@@ -59,7 +59,7 @@ function renderLisst(list) {
           <h3 class="content-product-h3">${list[i].name}</h3>
           <div class="content-product-deltals">
             <div class="price">
-              <span class="money">${list[i].price}</span>
+              <span class="money">${list[i].price}$</span>
             </div>
             <div class="menu-push-shop">
             
@@ -105,7 +105,7 @@ listGetshopCart(useEmail);
 
 let registerLogin = document.getElementById("registerLogin");
 registerLogin.addEventListener("click", function () {
-  // window.location.href = "menu.html"
+  window.location.href = "menu.html"
   localStorage.removeItem("useEmail")
 });
 //                                      nút yêu thích hàng
@@ -205,11 +205,12 @@ let shopCartCheck = JSON.parse(localStorage.getItem("shopCart"));
     `;
   }
   document.querySelector(".table-bot").innerHTML = dataCart;
+
 }
 
 /*                       gọi từ local để render vào shop         */
 let shopCart = JSON.parse(localStorage.getItem("shopCart"));
-
+pushCart(shopCart)
 
 /*                        hàm hiện số lượng mua sp                            */
 
@@ -223,7 +224,7 @@ function pushnumber(number) {
 
 
 }
-
+pushnumber(shopCart)
 
 /*                    xóa sản phẩm                       */
 function delete_cart(id) {
@@ -263,6 +264,29 @@ function totalAll(shopCart) {
     // console.log(all);
   document.getElementById("totalAll").innerHTML = all +"$"
 
+}
+
+
+/*                      tìm kiếm                         */
+
+function checkSearch() {
+  let list = JSON.parse(localStorage.getItem("listFruit"))
+  let checkList = [];
+  let inputValue =  document.getElementById("search_Shop").value.toUpperCase();
+  for (let i = 0; i < list.length; i++) {
+    if (list[i].name.toUpperCase().indexOf(inputValue) != -1) {
+      checkList.push(list[i])
+    }
+  }
+  // console.log(checkList);
+  renderLisst(checkList);
+}
+
+
+/*                          thanh toán                     */
+
+function payment() {
+  window.location.href = "payment.html"
 }
 
 

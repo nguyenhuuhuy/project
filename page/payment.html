@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/payment.css" />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Sản Phẩm</th>
+        <th>Số Lượng</th>
+        <th>Giá Tiền</th>
+      </tr>
+      <tbody id="pushshopCart">
+         <!-- <tr>
+        <td><img src="/image/fruits_1.jpg" alt="" /></td>
+        <td>1</td>
+        <td>13$</td>
+      </tr>
+      <tr>
+        <td><img src="/image/fruits_1.jpg" alt="" /></td>
+        <td>1</td>
+        <td>13$</td>
+      </tr> -->
+      </tbody>
+     
+      <tr>
+        <td>Tổng Cộng</td>
+        <td id="qtt"></td>
+        <td id="totalAll"></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>
+          <input type="radio" /> <span><b>Direct bank transfer</b></span>
+          <p>
+            Make your payment directly into our bank account. Please use your
+            Order ID as the payment reference. Your order will not be shipped
+            until the funds have cleared in our account.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="radio" /> <span><b>Check payments</b></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="radio" /> <span><b>Cash on delivery</b></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <input type="radio"> <span><b>PayPal</b> <img src="/image/AM_mc_vs_ms_ae_UK.png" alt=""> <a href="">What is PayPal?</a></span>
+        </td>
+      </tr>
+    </table>
+    <input type="checkbox" style="margin-left: 2.5%; margin-top: 1.5%;"> <span>I have read and agree to the website terms and conditions </span>
+    <br>
+    <button class="pay">Thanh Toán</button>
+  </body>
+  <script src="/js/payment.js"></script>
+</html>
