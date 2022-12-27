@@ -12,7 +12,8 @@ login.addEventListener("click", function () {
     for (let i = 0; i < check.length; i++) {
       if (
         check[i].email == email_login.value &&
-        check[i].password == password_login.value
+        check[i].password == password_login.value &&
+        check[i].status == false
       ) {
         flag = true;
         console.log("ok");
@@ -22,14 +23,15 @@ login.addEventListener("click", function () {
       let error_login = document.getElementById("error_login");
       error_login.style.display = "block";
     } else {
-      let status = JSON.parse(localStorage.getItem("list"))
+      let status = JSON.parse(localStorage.getItem("list"));
       for (let i = 0; i < status.length; i++) {
-          if (status[i].email == email_login.value &&
-        status[i].password == password_login.value) {
+        if (
+          status[i].email == email_login.value &&
+          status[i].password == password_login.value
+        ) {
           status[i].status = true;
-          localStorage.setItem("list",JSON.stringify(status))
+          localStorage.setItem("list", JSON.stringify(status));
         }
-        
       }
       window.location.href = "menu.html";
     }

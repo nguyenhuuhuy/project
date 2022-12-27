@@ -47,6 +47,7 @@
 // let listFruit
 let listfruit = JSON.parse(localStorage.getItem("listFruit"));
 
+// đổ sản phẩm từ trang quản lý
 function renderLisst(list) {
   let data = "";
   for (let i = 0; i < list.length; i++) {
@@ -75,38 +76,10 @@ function renderLisst(list) {
 }
 renderLisst(listfruit);
 
-// hiện giỏ hàng
-
-let getShop = document.getElementById("getShop");
-
-getShop.addEventListener("click", function () {
-  let menuCart = document.querySelector(".menu-cart");
-  menuCart.style.display = "block";
-});
-
-// ẩn giỏ hàng
-
-let closeCart = document.querySelector(".close-cart");
-
-closeCart.addEventListener("click", function () {
-  let menuCart = document.querySelector(".menu-cart");
-  menuCart.style.display = "none";
-});
-/*                          đổ email vào shopCart                             */
-
-let useEmail = JSON.parse(localStorage.getItem("list"));
-function listGetshopCart(listupcart) {
-  for (let i = 0; i < listupcart.length; i++) {
-    if (listupcart[i].status == true) {
-      document.getElementById("pushGmail").innerHTML = listupcart[i].email;
-    }
-  }
-}
-listGetshopCart(useEmail);
-
 /*                              đăng xuất                               */
 
 let registerLogin = document.getElementById("registerLogin");
+
 registerLogin.addEventListener("click", function () {
   alert("đăng Xuất Thành Công!");
   let uselogin = JSON.parse(localStorage.getItem("list"));
@@ -117,27 +90,15 @@ registerLogin.addEventListener("click", function () {
       localStorage.removeItem("shopCart");
     }
   }
-  window.location.href = "menu.html"
+  window.location.href = "/index.html";
 });
-//                                      nút yêu thích hàng
-let count = 1;
-function like(id) {
-  count++;
-  document.getElementById(`likeList${id}`).style.color = "red";
-  if (count == 3) {
-    document.getElementById(`likeList${id}`).style.color = "black";
-    count = 1;
-  }
-}
 
-//                             nút thêm vào giỏ hàng để đổ mảng vào shop
+//                             nút thêm vào giỏ hàng (ShopCart)
 
 function pushCart(id) {
-  // console.log(id);
   let listFruit = JSON.parse(localStorage.getItem("listFruit"));
   let listShop = JSON.parse(localStorage.getItem("shopCart"));
 
-  // console.log(listShop);
   if (listShop == null) {
     listShop = [];
     for (let i = 0; i < listFruit.length; i++) {
@@ -148,13 +109,8 @@ function pushCart(id) {
         break;
       }
     }
-    let shopCartCheck = JSON.parse(localStorage.getItem("shopCart"));
-
-    pushnumber(shopCartCheck);
-    totalAll(shopCartCheck);
   } else {
     let listShop = JSON.parse(localStorage.getItem("shopCart"));
-
     for (let i = 0; i < listFruit.length; i++) {
       if (listFruit[i].id == id) {
         for (let j = 0; j < listShop.length; j++) {
@@ -186,82 +142,34 @@ function pushCart(id) {
         }
       }
     }
-    // let shopCartCheck = JSON.parse(localStorage.getItem("shopCart"));
-
-    
   }
-  // // đổ sang trang thanh toán
-  // let pushCart = JSON.parse(localStorage.getItem("shopCart"));
-  // //   console.log(pushCart);
-  // let dataCart = [];
-  // for (let i = 0; i < pushCart.length; i++) {
-  //   dataCart += `
-  //           <tr>
-  //               <td>
-  //                   <img src="${pushCart[i].image}" alt="">
-  //                   <h3>${pushCart[i].name}</h3>
-  //               </td>
-  //               <td>${pushCart[i].quantity}</td>
-  //               <td>${pushCart[i].price}$</td>
-  //               <td><button class="delete-cart" onclick="delete_cart(${pushCart[i].id})">Delete</button></td>
-  //           </tr>
-
-  //   `;
-  // }
-  // document.querySelector(".table-bot").innerHTML = dataCart;
-
-  // let useList = JSON.parse(localStorage.getItem("list"))
-  //   for (let index = 0; index < useList.length; index++) {
-  //     if (useList[index].status == true) {
-  //         let list = JSON.parse(localStorage.getItem("shopCart"))
-  //         useList[index].shop = list;
-  //         localStorage.setItem("list",JSON.stringify(useList))
-  //         let renderShop = useList[index].shop;
-  //         let renderdata = [];
-  //         for (let a = 0; a < renderShop.length; a++) {
-  //           renderdata += `
-  //             <tr>
-  //                <td>
-  //                    <img src="${renderShop[a].image}" alt="">
-  //                    <h3>${renderShop[a].name}</h3>
-  //                </td>
-  //                <td>${renderShop[a].quantity}</td>
-  //                <td>${renderShop[a].price}$</td>
-  //                <td><button class="delete-cart" onclick="delete_cart(${renderShop[a].id})">Delete</button></td>
-  //             </tr>
-
-  //           `
-  //         }
-  //         document.querySelector(".table-bot").innerHTML = renderdata;
-  //     }
-
-  //   }
+  // giỏ hàng của người mua
   renderUse(list);
+  // số lượng
   pushnumber(list);
+  // tổng số tiền
   totalAll(list);
 }
 
-/*                       gọi từ local để render vào shop         */
+//                       gọi từ local list Use để render vào shop         
 let list = JSON.parse(localStorage.getItem("list"));
 
 function renderUse(use) {
   for (let i = 0; i < use.length; i++) {
     if (use[i].status == true) {
       let listShop = JSON.parse(localStorage.getItem("shopCart"));
-      // console.log(listShop);
       if (listShop == null) {
-          listShop = []
+        listShop = [];
         console.log("chưa có sp");
         let lit = JSON.parse(localStorage.getItem("list"));
         for (let index = 0; index < lit.length; index++) {
           if (lit[index].status == true) {
             let render = lit[index].shop;
-            localStorage.setItem("shopCart",JSON.stringify(render));
-            // console.log(render);
+            localStorage.setItem("shopCart", JSON.stringify(render));
             let data = "";
             for (let j = 0; j < render.length; j++) {
               data += `
-        <tr>
+                <tr>
                  <td>
                      <img src="${render[j].image}" alt="">
                      <h3>${render[j].name}</h3>
@@ -269,8 +177,8 @@ function renderUse(use) {
                  <td>${render[j].quantity}</td>
                  <td>${render[j].price}$</td>
                  <td><button class="delete-cart" onclick="delete_cart(${render[j].id})">Delete</button></td>
-        </tr>
-        `;
+                </tr>
+              `;
             }
             document.querySelector(".table-bot").innerHTML = data;
           }
@@ -278,13 +186,12 @@ function renderUse(use) {
       } else {
         let lis = JSON.parse(localStorage.getItem("shopCart"));
         use[i].shop = lis;
-        // console.log(use[i].shop);
         localStorage.setItem("list", JSON.stringify(use));
         let render = use[i].shop;
         let data = "";
         for (let j = 0; j < render.length; j++) {
           data += `
-        <tr>
+              <tr>
                  <td>
                      <img src="${render[j].image}" alt="">
                      <h3>${render[j].name}</h3>
@@ -292,8 +199,8 @@ function renderUse(use) {
                  <td>${render[j].quantity}</td>
                  <td>${render[j].price}$</td>
                  <td><button class="delete-cart" onclick="delete_cart(${render[j].id})">Delete</button></td>
-        </tr>
-        `;
+              </tr>
+          `;
         }
         document.querySelector(".table-bot").innerHTML = data;
       }
@@ -302,35 +209,32 @@ function renderUse(use) {
 }
 renderUse(list);
 
-/*                        hàm hiện số lượng mua sp                            */
+//                        hàm hiện số lượng mua sp                            
 
 function pushnumber(number) {
-  
   for (let i = 0; i < number.length; i++) {
     if (number[i].status == true) {
       let listnumb = number[i].shop;
       let sum = 0;
       for (let j = 0; j < listnumb.length; j++) {
-        sum +=listnumb[j].quantity;
+        sum += listnumb[j].quantity;
       }
       document.getElementById("editQuantity").innerHTML = sum;
+      if(listnumb.length == 0) {
+        document.getElementById("editQuantity").innerHTML = " ";
+      }
     }
   }
-  // console.log(sum);
 }
 pushnumber(list);
 
-/*                    xóa sản phẩm                       */
+//                    xóa sản phẩm                       
 function delete_cart(id) {
-  console.log(id);
   let listShopCart = JSON.parse(localStorage.getItem("shopCart"));
-  //  console.log(listShopCart);
   for (let i = 0; i < listShopCart.length; i++) {
     if (listShopCart[i].id == id) {
       listShopCart[i].id = i;
-      // console.log(listShopCart[i].id);
       listShopCart.splice(i, 1);
-      // console.log(listShopCart);
       localStorage.setItem("shopCart", JSON.stringify(listShopCart));
     }
   }
@@ -338,21 +242,10 @@ function delete_cart(id) {
   deleteShopcart(listShopCart);
 }
 
-/*nếu shopCart bẳng [] xóa */
-let checkShopcart = JSON.parse(localStorage.getItem("shopCart"))
-function deleteShopcart(shopCart) {
-  // let deleteShopcart = JSON.parse(localStorage.getItem("shopCart"))
-  if (shopCart.length == 0) {
-    localStorage.removeItem("shopCart");
-  }
-}
-deleteShopcart(checkShopcart);
 
-/*                     tính tiền                  */
+//                     Hiện tổng tiền                  
 
 function totalAll(shopCart) {
-
-  
   for (let i = 0; i < shopCart.length; i++) {
     if (shopCart[i].status == true) {
       let sum = shopCart[i].shop;
@@ -362,25 +255,12 @@ function totalAll(shopCart) {
       }
       document.getElementById("totalAll").innerHTML = all + "$";
     }
-  } 
-}
-totalAll(list)
-/*                      tìm kiếm                         */
-
-function checkSearch() {
-  let list = JSON.parse(localStorage.getItem("listFruit"));
-  let checkList = [];
-  let inputValue = document.getElementById("search_Shop").value.toUpperCase();
-  for (let i = 0; i < list.length; i++) {
-    if (list[i].name.toUpperCase().indexOf(inputValue) != -1) {
-      checkList.push(list[i]);
-    }
   }
-  // console.log(checkList);
-  renderLisst(checkList);
 }
+totalAll(list);
 
-/*                          thanh toán                     */
+
+//                          thanh toán                     
 
 function payment() {
   window.location.href = "payment.html";

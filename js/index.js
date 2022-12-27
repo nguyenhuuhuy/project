@@ -25,33 +25,56 @@ function renderLisst(list) {
 }
 renderLisst(listfruit);
 
+let checkUse = document.getElementById("loginUse");
+checkUse.addEventListener("click",function() {
+    let listUse = JSON.parse(localStorage.getItem("list"))
+    let flag = false
+    for (let i = 0; i < listUse.length; i++) {
+      if(listUse[i].status == true) {
+        flag = true
+        
+        break;
+      } else {
+        flag = false
+        
+      }  
+    }
+    if (flag == true) {
+      alert("bạn cần đăng xuất!");
+        window.location.href = "/page/menu.html"
+    } else {
+      window.location.href = "/page/login.html"
+    }
+})
 
-// 3 ảnh to
-let slideIndex = 1;
-showSlides(slideIndex);
+// // 3 ảnh to
+// let slideIndex = 1;
+// showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+// function showSlides(n) {
+//   let i;
+//   let slides = document.getElementsByClassName("mySlides");
+//   let dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {slideIndex = 1}    
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";  
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";  
+//   dots[slideIndex-1].className += " active";
+// }
 
+
+// check đăng nhập
 
