@@ -78,3 +78,13 @@ checkUse.addEventListener("click",function() {
 
 // check đăng nhập
 
+function addAdmin() {
+  let obj =[
+    {
+    gmail: "admin@gmail.com",
+    password: "123456",
+  }
+  ] 
+  localStorage.setItem("adm", JSON.stringify(obj));
+}
+addAdmin();

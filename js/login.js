@@ -5,6 +5,17 @@ let login = document.getElementById("login_use");
 let flag = false;
 login.addEventListener("click", function () {
   let check = JSON.parse(localStorage.getItem("list"));
+  let adm = JSON.parse(localStorage.getItem("adm"));
+  for (let ad = 0; ad < adm.length; ad++) {
+    if (
+      adm[ad].gmail == email_login.value &&
+      adm[ad].password == password_login.value
+    ) {
+      window.location.href = "massterHome.html";
+      break;
+    }
+  }
+
   if (check == null) {
     let error_login = document.getElementById("error_login");
     error_login.style.display = "block";
