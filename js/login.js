@@ -1,7 +1,7 @@
 // phần login đăng nhập và chuyển tới web bán hàng
 let email_login = document.getElementById("email_login");
 let password_login = document.getElementById("password_login");
-let login = document.getElementById("login");
+let login = document.getElementById("login_use");
 let flag = false;
 login.addEventListener("click", function () {
   let check = JSON.parse(localStorage.getItem("list"));
